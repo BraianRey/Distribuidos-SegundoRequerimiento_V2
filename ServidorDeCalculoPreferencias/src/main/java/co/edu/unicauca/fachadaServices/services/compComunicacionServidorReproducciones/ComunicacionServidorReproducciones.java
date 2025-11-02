@@ -1,11 +1,11 @@
-package co.edu.unicauca.fachadaServices.services.componenteComunicacionServidorReproducciones;
+package co.edu.unicauca.fachadaServices.services.compComunicacionServidorReproducciones;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import co.edu.unicauca.fachadaServices.DTO.ReproduccionesDTOEntrada;
 import feign.Feign;
 import feign.jackson.JacksonDecoder;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ComunicacionServidorReproducciones {
     private static final String BASE_URL = "http://localhost:3000";

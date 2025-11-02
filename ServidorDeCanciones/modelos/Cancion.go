@@ -9,4 +9,5 @@ type Cancion struct {
 	Anio     int
 	Duracion string
 	Genero   Genero
+	Idioma   string
 }

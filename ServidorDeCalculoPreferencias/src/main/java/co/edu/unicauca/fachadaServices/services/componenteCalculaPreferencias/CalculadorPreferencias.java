@@ -12,6 +12,8 @@ import co.edu.unicauca.fachadaServices.DTO.PreferenciaArtistaDTORespuesta;
 import co.edu.unicauca.fachadaServices.DTO.PreferenciaGeneroDTORespuesta;
 import co.edu.unicauca.fachadaServices.DTO.PreferenciasDTORespuesta;
 import co.edu.unicauca.fachadaServices.DTO.ReproduccionesDTOEntrada;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 public class CalculadorPreferencias {
 
@@ -70,8 +72,8 @@ public class CalculadorPreferencias {
         
         PreferenciasDTORespuesta respuesta = new PreferenciasDTORespuesta();
         respuesta.setIdUsuario(idUsuario);
-        respuesta.setPreferenciasGeneros(preferenciasGeneros);
-        respuesta.setPreferenciasArtistas(preferenciasArtistas);
+        respuesta.setPreferenciasGenero(preferenciasGeneros);
+        respuesta.setPreferenciasArtista(preferenciasArtistas);
 
         return respuesta; 
     }
