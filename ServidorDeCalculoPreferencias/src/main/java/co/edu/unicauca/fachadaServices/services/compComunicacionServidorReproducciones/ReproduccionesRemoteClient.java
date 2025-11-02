@@ -8,8 +8,7 @@ import feign.RequestLine;
 import java.util.List;
 
 public interface ReproduccionesRemoteClient {
-    @RequestLine("GET /Reproducciones?idUsuario={idUsuario}")
-    @Headers("Accept: application/json")
+    @RequestLine("GET /reproducciones?idUsuario={idUsuario}")
     List<ReproduccionesDTOEntrada> obtenerReproducciones(@Param("idUsuario") Integer idUsuario);
 }
 
