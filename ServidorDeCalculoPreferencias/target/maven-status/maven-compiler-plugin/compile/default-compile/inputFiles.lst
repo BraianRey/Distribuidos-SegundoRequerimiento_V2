@@ -1,0 +1,17 @@
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\capaDeControladores\ControladorPreferenciasUsuariosIml.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\capaDeControladores\ControladorPreferenciasUsuariosInt.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\configuracion\lector\LectorPropiedadesConfig.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\configuracion\servicios\ServidorDeObjetos.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\DTO\CancionDTOEntrada.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\DTO\PreferenciaArtistaDTORespuesta.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\DTO\PreferenciaGeneroDTORespuesta.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\DTO\PreferenciasDTORespuesta.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\DTO\ReproduccionesDTOEntrada.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\services\componenteCalculaPreferencias\CalculadorPreferencias.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\services\componenteComunicacionServidorCanciones\CancionesRemoteClient.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\services\componenteComunicacionServidorCanciones\ComunicacionServidorCanciones.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\services\componenteComunicacionServidorReproducciones\ComunicacionServidorReproducciones.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\services\componenteComunicacionServidorReproducciones\ReproduccionesRemoteClient.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\services\IPreferenciasService.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\fachadaServices\services\PreferenciasServiceImpl.java
+C:\Users\adcam\OneDrive\Escritorio\ACBO\Septimo\Lab distribuidos\plantilla\servidor_java_rmi\src\main\java\co\edu\unicauca\main\Main.java

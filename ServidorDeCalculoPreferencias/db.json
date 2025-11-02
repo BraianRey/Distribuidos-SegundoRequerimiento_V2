@@ -1,0 +1,40 @@
+{
+  "canciones": [
+    { "id": 1, "titulo": "Shape of You", "artista": "Ed Sheeran", "genero": "Pop" },
+    { "id": 2, "titulo": "Bohemian Rhapsody", "artista": "Queen", "genero": "Rock" },
+    { "id": 3, "titulo": "Blinding Lights", "artista": "The Weeknd", "genero": "Pop" },
+    { "id": 4, "titulo": "Despacito", "artista": "Luis Fonsi", "genero": "Reggaeton" },
+    { "id": 5, "titulo": "Thunderstruck", "artista": "AC/DC", "genero": "Rock" },
+    { "id": 6, "titulo": "Bad Guy", "artista": "Billie Eilish", "genero": "Alternative" },
+    { "id": 7, "titulo": "Peaches", "artista": "Justin Bieber", "genero": "R&B" },
+    { "id": 8, "titulo": "Hips Don’t Lie", "artista": "Shakira", "genero": "Pop" },
+    { "id": 9, "titulo": "Enter Sandman", "artista": "Metallica", "genero": "Metal" },
+    { "id": 10, "titulo": "Vivir Mi Vida", "artista": "Marc Anthony", "genero": "Salsa" }
+  ],
+  "usuarios": [
+    { "id": 1, "nombre": "Daniel" },
+    { "id": 2, "nombre": "María" },
+    { "id": 3, "nombre": "Carlos" },
+    { "id": 4, "nombre": "Ana" }
+  ],
+  "reproducciones": [
+    { "id": 1, "idUsuario": 1, "idCancion": 3 },
+    { "id": 2, "idUsuario": 1, "idCancion": 1 },
+    { "id": 3, "idUsuario": 4, "idCancion": 7 },
+    { "id": 4, "idUsuario": 1, "idCancion": 4 },
+    { "id": 5, "idUsuario": 2, "idCancion": 2 },
+    { "id": 6, "idUsuario": 2, "idCancion": 5 },
+    { "id": 7, "idUsuario": 2, "idCancion": 9 },
+    { "id": 8, "idUsuario": 3, "idCancion": 6 },
+    { "id": 9, "idUsuario": 3, "idCancion": 7 },
+    { "id": 10, "idUsuario": 3, "idCancion": 3 },
+    { "id": 11, "idUsuario": 4, "idCancion": 7 },
+    { "id": 12, "idUsuario": 4, "idCancion": 8 },
+    { "id": 13, "idUsuario": 4, "idCancion": 4 },
+    { "id": 14, "idUsuario": 2, "idCancion": 2 },
+    { "id": 15, "idUsuario": 4, "idCancion": 8 },
+    { "id": 16, "idUsuario": 3, "idCancion": 7 },
+    { "id": 17, "idUsuario": 4, "idCancion": 10 },
+    { "id": 18, "idUsuario": 4, "idCancion": 8 }
+  ]
+}
