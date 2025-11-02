@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package servicios;
+option go_package = "/serviciosCanciones";
+
+import "google/protobuf/empty.proto";
+
+message Genero {
+  int32 id = 1;
+  string nombre = 2;
+}
+
+message Cancion {
+  int32 id = 1;
+  string titulo = 2;
+  string artista = 3;
+  string album = 4;
+  int32 anio = 5;
+  string duracion = 6;
+  Genero genero = 7;
+}
+
+message ListaGeneros {
+  repeated Genero generos = 1;
+}
+
+message GeneroId {
+  int32 id = 1;
+}
+
+message ListaCanciones {
+  repeated Cancion canciones = 1;
+}
+
+message CancionId {
+  int32 id = 1;
+}
+
+service CancionesService {
+  rpc ListarGeneros (google.protobuf.Empty) returns (ListaGeneros);
+  rpc ListarCancionesPorGenero (GeneroId) returns (ListaCanciones);
+  rpc ObtenerDetallesCancion (CancionId) returns (Cancion);
+}
