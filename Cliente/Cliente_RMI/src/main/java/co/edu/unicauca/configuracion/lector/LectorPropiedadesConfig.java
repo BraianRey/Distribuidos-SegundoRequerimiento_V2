@@ -12,7 +12,7 @@ public class LectorPropiedadesConfig {
 
     static {
         try (InputStream input = LectorPropiedadesConfig.class.getClassLoader()
-                .getResourceAsStream("Cliente/Cliente_RMI/src/main/resources/application.properties")) {
+                .getResourceAsStream("application.properties")) {
             if (input == null) {
                 System.out.println("⚠️  No se encontró el archivo application.properties");
             } else {
@@ -35,7 +35,7 @@ public class LectorPropiedadesConfig {
      * @return IP del servidor (por defecto: localhost)
      */
     public String obtenerIPServidor() {
-        return props.getProperty("servidor.ip", "localhost");
+        return props.getProperty("ns.host", "localhost");
     }
 
     /**
@@ -43,7 +43,7 @@ public class LectorPropiedadesConfig {
      * @return Puerto del servidor (por defecto: 1099)
      */
     public int obtenerPuertoServidor() {
-        String puerto = props.getProperty("servidor.puerto", "2020");
+        String puerto = props.getProperty("ns.port", "2020");
         try {
             return Integer.parseInt(puerto);
         } catch (NumberFormatException e) {

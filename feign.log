@@ -53,3 +53,69 @@
 [CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
 
 [CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- HTTP/1.1 200 OK (11ms)
+[CancionesRemoteClient#obtenerCanciones] content-length: 1059
+[CancionesRemoteClient#obtenerCanciones] content-type: application/json
+[CancionesRemoteClient#obtenerCanciones] date: Mon, 03 Nov 2025 19:09:40 GMT
+[CancionesRemoteClient#obtenerCanciones] 
+[CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
+
+[CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- HTTP/1.1 200 OK (9ms)
+[CancionesRemoteClient#obtenerCanciones] content-length: 1059
+[CancionesRemoteClient#obtenerCanciones] content-type: application/json
+[CancionesRemoteClient#obtenerCanciones] date: Mon, 03 Nov 2025 19:14:55 GMT
+[CancionesRemoteClient#obtenerCanciones] 
+[CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
+
+[CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- HTTP/1.1 200 OK (1ms)
+[CancionesRemoteClient#obtenerCanciones] content-length: 1059
+[CancionesRemoteClient#obtenerCanciones] content-type: application/json
+[CancionesRemoteClient#obtenerCanciones] date: Mon, 03 Nov 2025 19:19:35 GMT
+[CancionesRemoteClient#obtenerCanciones] 
+[CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
+
+[CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- HTTP/1.1 200 OK (1ms)
+[CancionesRemoteClient#obtenerCanciones] content-length: 1059
+[CancionesRemoteClient#obtenerCanciones] content-type: application/json
+[CancionesRemoteClient#obtenerCanciones] date: Mon, 03 Nov 2025 19:20:25 GMT
+[CancionesRemoteClient#obtenerCanciones] 
+[CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
+
+[CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- HTTP/1.1 200 OK (1ms)
+[CancionesRemoteClient#obtenerCanciones] content-length: 1059
+[CancionesRemoteClient#obtenerCanciones] content-type: application/json
+[CancionesRemoteClient#obtenerCanciones] date: Mon, 03 Nov 2025 19:21:27 GMT
+[CancionesRemoteClient#obtenerCanciones] 
+[CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
+
+[CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- HTTP/1.1 200 OK (1ms)
+[CancionesRemoteClient#obtenerCanciones] content-length: 1059
+[CancionesRemoteClient#obtenerCanciones] content-type: application/json
+[CancionesRemoteClient#obtenerCanciones] date: Mon, 03 Nov 2025 19:22:12 GMT
+[CancionesRemoteClient#obtenerCanciones] 
+[CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
+
+[CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
