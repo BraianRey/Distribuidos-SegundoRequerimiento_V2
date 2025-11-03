@@ -210,6 +210,13 @@ func (f *FachadaCanciones) RegistrarCancion(c modelos.Cancion) (modelos.Cancion,
 
 	// Modificar la lista de canciones
 	f.mu.Lock()
+	// verificar duplicado por título (case-insensitive)
+	for _, ex := range f.Canciones {
+		if strings.EqualFold(strings.TrimSpace(ex.Titulo), strings.TrimSpace(c.Titulo)) {
+			f.mu.Unlock()
+			return modelos.Cancion{}, fmt.Errorf("título ya registrado: %s", c.Titulo)
+		}
+	}
 	defer f.mu.Unlock()
 
 	// Asignar ID

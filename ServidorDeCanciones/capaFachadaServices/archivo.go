@@ -16,19 +16,20 @@ import (
 	"github.com/tcolgate/mp3"
 )
 
-// GuardarArchivoCancion copia un archivo de audio desde srcPath a la carpeta "canciones/"
+// Copia un archivo de audio desde srcPath a la carpeta "canciones/"
 // y lo renombra usando el título (sanitizado) como "titulo.mp3". Devuelve la ruta destino.
 func GuardarArchivoCancion(srcPath, titulo string) (string, error) {
 	if srcPath == "" || titulo == "" {
 		return "", nil
 	}
 
-	// Asegurar carpeta
-	destDir := "canciones"
+	// Asegurar carpeta usando ruta absoluta
+	destDir := filepath.Join(filepath.Dir(filepath.Dir(os.Args[0])), "canciones")
 	if err := os.MkdirAll(destDir, 0755); err != nil {
-		return "", err
+		return "", fmt.Errorf("error creando directorio %s: %v", destDir, err)
 	}
 
+	log.Printf("Guardando archivo en: %s", destDir)
 	// Comprobar título para nombre de archivo
 	re := regexp.MustCompile(`[^\p{L}0-9 '\-_]+`)
 	name := re.ReplaceAllString(titulo, "_")
@@ -63,12 +64,22 @@ func GuardarArchivoCancion(srcPath, titulo string) (string, error) {
 // Guarda el contenido del reader en la carpeta canciones/ con nombre tratado
 func GuardarArchivoDesdeReader(r io.Reader, titulo string) (string, error) {
 	if r == nil || titulo == "" {
-		return "", nil
+		return "", fmt.Errorf("reader o título vacíos")
 	}
+
+	// Crear directorio canciones en la raíz del proyecto
 	destDir := "canciones"
 	if err := os.MkdirAll(destDir, 0755); err != nil {
-		return "", err
+		return "", fmt.Errorf("error creando directorio %s: %v", destDir, err)
 	}
+
+	// Obtener ruta absoluta para logging
+	absPath, err := filepath.Abs(destDir)
+	if err != nil {
+		log.Printf("Warning: no se pudo obtener ruta absoluta: %v", err)
+		absPath = destDir
+	}
+	log.Printf("Guardando archivo desde reader en: %s", absPath)
 	re := regexp.MustCompile(`[^\p{L}0-9 '\-_]+`)
 	name := re.ReplaceAllString(titulo, "_")
 	name = strings.TrimSpace(name)
