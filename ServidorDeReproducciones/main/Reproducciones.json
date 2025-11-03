@@ -64,7 +64,7 @@
     "idUsuario": 2,
     "idCancion": 6,
     "titulo": "Sunflower",
-    "artista": "Post Malone & Swae Lee",
+    "artista": "Post Malone \u0026 Swae Lee",
     "genero": "Pop",
     "idioma": "Inglés",
     "fechaHora": "2025-11-01T12:00:00Z"
@@ -194,9 +194,29 @@
     "idUsuario": 5,
     "idCancion": 6,
     "titulo": "Sunflower",
-    "artista": "Post Malone & Swae Lee",
+    "artista": "Post Malone \u0026 Swae Lee",
     "genero": "Pop",
     "idioma": "Inglés",
     "fechaHora": "2025-11-02T10:30:00Z"
+  },
+  {
+    "id": 21,
+    "idUsuario": 0,
+    "idCancion": 0,
+    "titulo": "Lamento Boliviano",
+    "artista": "",
+    "genero": "",
+    "idioma": "",
+    "fechaHora": "2025-11-02T20:38:34.1473573-05:00"
+  },
+  {
+    "id": 22,
+    "idUsuario": 1,
+    "idCancion": 2,
+    "titulo": "De Música Ligera",
+    "artista": "Soda Stereo",
+    "genero": "Rock",
+    "idioma": "Desconocido",
+    "fechaHora": "2025-11-02T21:02:12.8438748-05:00"
   }
 ]

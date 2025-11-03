@@ -12,7 +12,7 @@ public class LectorPropiedadesConfig {
 
     static {
         try (InputStream input = LectorPropiedadesConfig.class.getClassLoader()
-                .getResourceAsStream("application.properties")) {
+                .getResourceAsStream("Cliente/Cliente_RMI/src/main/resources/application.properties")) {
             if (input == null) {
                 System.out.println("⚠️  No se encontró el archivo application.properties");
             } else {
@@ -48,7 +48,7 @@ public class LectorPropiedadesConfig {
             return Integer.parseInt(puerto);
         } catch (NumberFormatException e) {
             System.out.println("⚠️  Puerto inválido en configuración, usando 1099 por defecto");
-            return 2020;
+            return 1010;
         }
     }
 }

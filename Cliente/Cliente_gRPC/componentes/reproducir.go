@@ -14,10 +14,26 @@ import (
 
 // Maneja el flujo de reproducción: solicita el stream, lanza goroutines y controla la parada.
 func ReproducirCancion(clientStream pbStream.AudioServiceClient, detalle *pbCancion.Cancion, ctx context.Context, reader *bufio.Reader) error {
-	stream, err := clientStream.EnviarCancionMedianteStream(ctx, &pbStream.PeticionDTO{Titulo: detalle.Titulo})
+	// Obtener idioma de la canción (si está disponible, sino usar "Desconocido")
+	idioma := "Desconocido"
+	//if detalle.Idioma != "" {
+	//idioma = detalle.Idioma
+	//}
+
+	// Crear petición con TODOS los campos necesarios
+	stream, err := clientStream.EnviarCancionMedianteStream(ctx, &pbStream.PeticionDTO{
+		Titulo:    detalle.Titulo,
+		Formato:   "mp3",
+		IdUsuario: 1, // TODO: Cambiar por ID del usuario logueado
+		IdCancion: detalle.Id,
+		Artista:   detalle.Artista,
+		Genero:    detalle.Genero.Nombre,
+		Idioma:    idioma,
+	})
 	if err != nil {
 		return err
 	}
+
 	readerPipe, writerPipe := io.Pipe()
 	canalStop := make(chan struct{})
 	canalSincronizacion := make(chan struct{})
