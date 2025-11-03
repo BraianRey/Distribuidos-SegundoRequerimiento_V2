@@ -14,7 +14,7 @@ import (
 )
 
 // Despliega el menú principal y maneja la navegación entre submenús
-func MostrarMenuPrincipal(clientStream pbStream.AudioServiceClient, clientCancion pbCancion.CancionesServiceClient, ctx context.Context) {
+func MostrarMenuPrincipal(clientStream pbStream.AudioServiceClient, clientCancion pbCancion.CancionesServiceClient, ctx context.Context, userID string) {
 	// lector de entrada estándar
 	reader := bufio.NewReader(os.Stdin)
 	// menú principal delega en submenus
@@ -27,7 +27,7 @@ func MostrarMenuPrincipal(clientStream pbStream.AudioServiceClient, clientCancio
 			fmt.Println("Saliendo...")
 			return
 		case "1":
-			mostrarMenuGeneros(clientStream, clientCancion, ctx, reader)
+			mostrarMenuGeneros(clientStream, clientCancion, ctx, reader, userID)
 		default:
 			// mantiene el loop
 			fmt.Println("Opción inválida.")
@@ -36,7 +36,7 @@ func MostrarMenuPrincipal(clientStream pbStream.AudioServiceClient, clientCancio
 }
 
 // Maneja la selección de géneros y delega la selección de canción
-func mostrarMenuGeneros(clientStream pbStream.AudioServiceClient, clientCancion pbCancion.CancionesServiceClient, ctx context.Context, reader *bufio.Reader) {
+func mostrarMenuGeneros(clientStream pbStream.AudioServiceClient, clientCancion pbCancion.CancionesServiceClient, ctx context.Context, reader *bufio.Reader, userID string) {
 	for {
 		idGenero, ok, err := comp.SeleccionarGenero(clientCancion, ctx, reader)
 		if err != nil {
@@ -62,13 +62,13 @@ func mostrarMenuGeneros(clientStream pbStream.AudioServiceClient, clientCancion 
 		}
 
 		// Mostrar detalles y opciones para la canción seleccionada
-		mostrarDetallesCancion(clientStream, detalle, ctx, reader)
+		mostrarDetallesCancion(clientStream, detalle, ctx, reader, userID)
 		// Después de mostrar detalles, volvemos a la lista de géneros
 	}
 }
 
 // Imprime detalles y ofrece opciones (reproducir/volver)
-func mostrarDetallesCancion(clientStream pbStream.AudioServiceClient, detalle *pbCancion.Cancion, ctx context.Context, reader *bufio.Reader) {
+func mostrarDetallesCancion(clientStream pbStream.AudioServiceClient, detalle *pbCancion.Cancion, ctx context.Context, reader *bufio.Reader, userID string) {
 	fmt.Printf("\nDetalles de la canción:\nTítulo: %s\nArtista: %s\nAlbum: %s\nAño: %d\nDuración: %s\nGénero: %s\n",
 		detalle.Titulo, detalle.Artista, detalle.Album, detalle.Anio, detalle.Duracion, detalle.Genero.Nombre)
 
@@ -81,7 +81,7 @@ func mostrarDetallesCancion(clientStream pbStream.AudioServiceClient, detalle *p
 			// Volver a la lista de canciones/géneros
 			return
 		case "1":
-			if err := comp.ReproducirCancion(clientStream, detalle, ctx, reader); err != nil {
+			if err := comp.ReproducirCancion(clientStream, detalle, ctx, reader, userID); err != nil {
 				log.Println("Error durante la reproducción:", err)
 			}
 			// Después de reproducir volvemos al menú de detalles (o se podría volver a géneros)

@@ -11,7 +11,7 @@ import (
 	pbStream "servidor.local/grpc-servidorstream/serviciosStreaming"
 )
 
-func RunClienteGRPC() {
+func RunClienteGRPC(userID string) {
 	// Conexión al servidor de streaming
 	connStream, err := grpc.Dial("localhost:50051", grpc.WithInsecure())
 	if err != nil {
@@ -37,7 +37,6 @@ func RunClienteGRPC() {
 	// Asegurar la cancelación del context al finalizar main
 	defer cancel()
 
-	// Mostrar menú principal
-
-	menu.MostrarMenuPrincipal(clientStream, clientCancion, ctx)
+	// Mostrar menú principal (pasar userID para operaciones que lo requieran)
+	menu.MostrarMenuPrincipal(clientStream, clientCancion, ctx, userID)
 }

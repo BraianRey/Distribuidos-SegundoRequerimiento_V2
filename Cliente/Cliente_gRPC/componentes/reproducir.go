@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"io"
+	"regexp"
 	"strconv"
 	"strings"
 
@@ -14,18 +15,26 @@ import (
 )
 
 // Maneja el flujo de reproducción: solicita el stream, lanza goroutines y controla la parada.
-func ReproducirCancion(clientStream pbStream.AudioServiceClient, detalle *pbCancion.Cancion, ctx context.Context, reader *bufio.Reader) error {
-	// Obtener ID de usuario del archivo de configuración
-	config, err := util.GetConfig()
-	if err != nil {
-		return fmt.Errorf("error al leer configuración: %v", err)
+func ReproducirCancion(clientStream pbStream.AudioServiceClient, detalle *pbCancion.Cancion, ctx context.Context, reader *bufio.Reader, providedUserID string) error {
+	// Determinar ID de usuario: requerimos que el usuario sea proporcionado por el Unificador
+	if providedUserID == "" {
+		return fmt.Errorf("debe proporcionar userID (ejecutado en modo standalone no permitido sin userID)")
 	}
-	userID, err := strconv.Atoi(config.UserID)
-	if err != nil {
-		return fmt.Errorf("error al convertir ID de usuario: %v", err)
-	}
-	if userID == 0 {
-		return fmt.Errorf("debe iniciar sesión primero")
+	var userIDInt int
+	// Intentar convertir directamente
+	if uid, err := strconv.Atoi(providedUserID); err == nil {
+		userIDInt = uid
+	} else {
+		re := regexp.MustCompile("\\d+")
+		found := re.FindString(providedUserID)
+		if found == "" {
+			return fmt.Errorf("error al convertir ID de usuario proporcionado: %v", err)
+		}
+		uid2, err2 := strconv.Atoi(found)
+		if err2 != nil {
+			return fmt.Errorf("error al convertir ID de usuario extraído: %v", err2)
+		}
+		userIDInt = uid2
 	}
 
 	// Crear petición con TODOS los campos necesarios
@@ -38,7 +47,7 @@ func ReproducirCancion(clientStream pbStream.AudioServiceClient, detalle *pbCanc
 		Duracion:  detalle.Duracion,
 		Genero:    detalle.Genero.Nombre,
 		Idioma:    detalle.Idioma,
-		IdUsuario: int32(userID),
+		IdUsuario: int32(userIDInt),
 	})
 	if err != nil {
 		return err
