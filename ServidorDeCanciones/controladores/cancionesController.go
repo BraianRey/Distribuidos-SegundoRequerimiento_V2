@@ -47,6 +47,7 @@ func (c *CancionesController) ListarCancionesPorGenero(ctx context.Context, in *
 				Id:     int32(cgo.Genero.ID),
 				Nombre: cgo.Genero.Nombre,
 			},
+			Idioma: cgo.Idioma,
 		})
 	}
 	return &pb.ListaCanciones{Canciones: canciones}, nil
@@ -69,5 +70,6 @@ func (c *CancionesController) ObtenerDetallesCancion(ctx context.Context, in *pb
 			Id:     int32(cgo.Genero.ID),
 			Nombre: cgo.Genero.Nombre,
 		},
+		Idioma: cgo.Idioma,
 	}, nil
 }

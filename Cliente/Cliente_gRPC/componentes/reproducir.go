@@ -36,6 +36,7 @@ func ReproducirCancion(clientStream pbStream.AudioServiceClient, detalle *pbCanc
 		}
 		userIDInt = uid2
 	}
+	fmt.Printf("   detalle.Idioma: '%s'\n", detalle.Idioma) // ← CRÍTICO
 
 	// Crear petición con TODOS los campos necesarios
 	stream, err := clientStream.EnviarCancionMedianteStream(ctx, &pbStream.PeticionDTO{

@@ -130,3 +130,306 @@
 [CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
 
 [CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- HTTP/1.1 200 OK (18ms)
+[CancionesRemoteClient#obtenerCanciones] content-length: 1059
+[CancionesRemoteClient#obtenerCanciones] content-type: application/json
+[CancionesRemoteClient#obtenerCanciones] date: Mon, 03 Nov 2025 15:08:12 GMT
+[CancionesRemoteClient#obtenerCanciones] 
+[CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
+
+[CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- HTTP/1.1 200 OK (3ms)
+[CancionesRemoteClient#obtenerCanciones] content-length: 1059
+[CancionesRemoteClient#obtenerCanciones] content-type: application/json
+[CancionesRemoteClient#obtenerCanciones] date: Mon, 03 Nov 2025 19:13:08 GMT
+[CancionesRemoteClient#obtenerCanciones] 
+[CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
+
+[CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- ERROR ConnectException: Connection refused: no further information (1ms)
+[CancionesRemoteClient#obtenerCanciones] java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:534)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:639)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:282)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:387)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:409)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1323)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1256)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1142)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1071)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1701)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1625)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at feign.Client$Default.convertResponse(Client.java:110)
+	at feign.Client$Default.execute(Client.java:106)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96)
+	at jdk.proxy2/jdk.proxy2.$Proxy3.obtenerCanciones(Unknown Source)
+	at co.edu.unicauca.fachadaServices.services.comunicacionCanciones.ComunicacionServidorCanciones.obtenerCancionesRemotas(ComunicacionServidorCanciones.java:36)
+	at co.edu.unicauca.fachadaServices.services.PreferenciasServiceImpl.getReferencias(PreferenciasServiceImpl.java:28)
+	at co.edu.unicauca.capaDeControladores.ControladorPreferenciasUsuariosIml.getReferencias(ControladorPreferenciasUsuariosIml.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+[CancionesRemoteClient#obtenerCanciones] <--- END ERROR
+[CancionesRemoteClient#obtenerCanciones] ---> RETRYING
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- ERROR ConnectException: Connection refused: no further information (15ms)
+[CancionesRemoteClient#obtenerCanciones] java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:534)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:639)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:282)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:387)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:409)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1323)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1256)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1142)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1071)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1701)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1625)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at feign.Client$Default.convertResponse(Client.java:110)
+	at feign.Client$Default.execute(Client.java:106)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96)
+	at jdk.proxy2/jdk.proxy2.$Proxy3.obtenerCanciones(Unknown Source)
+	at co.edu.unicauca.fachadaServices.services.comunicacionCanciones.ComunicacionServidorCanciones.obtenerCancionesRemotas(ComunicacionServidorCanciones.java:36)
+	at co.edu.unicauca.fachadaServices.services.PreferenciasServiceImpl.getReferencias(PreferenciasServiceImpl.java:28)
+	at co.edu.unicauca.capaDeControladores.ControladorPreferenciasUsuariosIml.getReferencias(ControladorPreferenciasUsuariosIml.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+[CancionesRemoteClient#obtenerCanciones] <--- END ERROR
+[CancionesRemoteClient#obtenerCanciones] ---> RETRYING
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- ERROR ConnectException: Connection refused: no further information (14ms)
+[CancionesRemoteClient#obtenerCanciones] java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:534)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:639)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:282)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:387)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:409)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1323)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1256)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1142)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1071)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1701)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1625)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at feign.Client$Default.convertResponse(Client.java:110)
+	at feign.Client$Default.execute(Client.java:106)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96)
+	at jdk.proxy2/jdk.proxy2.$Proxy3.obtenerCanciones(Unknown Source)
+	at co.edu.unicauca.fachadaServices.services.comunicacionCanciones.ComunicacionServidorCanciones.obtenerCancionesRemotas(ComunicacionServidorCanciones.java:36)
+	at co.edu.unicauca.fachadaServices.services.PreferenciasServiceImpl.getReferencias(PreferenciasServiceImpl.java:28)
+	at co.edu.unicauca.capaDeControladores.ControladorPreferenciasUsuariosIml.getReferencias(ControladorPreferenciasUsuariosIml.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+[CancionesRemoteClient#obtenerCanciones] <--- END ERROR
+[CancionesRemoteClient#obtenerCanciones] ---> RETRYING
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- ERROR ConnectException: Connection refused: no further information (0ms)
+[CancionesRemoteClient#obtenerCanciones] java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:534)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:639)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:282)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:387)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:409)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1323)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1256)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1142)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1071)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1701)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1625)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at feign.Client$Default.convertResponse(Client.java:110)
+	at feign.Client$Default.execute(Client.java:106)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96)
+	at jdk.proxy2/jdk.proxy2.$Proxy3.obtenerCanciones(Unknown Source)
+	at co.edu.unicauca.fachadaServices.services.comunicacionCanciones.ComunicacionServidorCanciones.obtenerCancionesRemotas(ComunicacionServidorCanciones.java:36)
+	at co.edu.unicauca.fachadaServices.services.PreferenciasServiceImpl.getReferencias(PreferenciasServiceImpl.java:28)
+	at co.edu.unicauca.capaDeControladores.ControladorPreferenciasUsuariosIml.getReferencias(ControladorPreferenciasUsuariosIml.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+[CancionesRemoteClient#obtenerCanciones] <--- END ERROR
+[CancionesRemoteClient#obtenerCanciones] ---> RETRYING
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- ERROR ConnectException: Connection refused: no further information (15ms)
+[CancionesRemoteClient#obtenerCanciones] java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:534)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:639)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:282)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:387)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:409)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1323)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1256)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1142)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1071)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1701)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1625)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at feign.Client$Default.convertResponse(Client.java:110)
+	at feign.Client$Default.execute(Client.java:106)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96)
+	at jdk.proxy2/jdk.proxy2.$Proxy3.obtenerCanciones(Unknown Source)
+	at co.edu.unicauca.fachadaServices.services.comunicacionCanciones.ComunicacionServidorCanciones.obtenerCancionesRemotas(ComunicacionServidorCanciones.java:36)
+	at co.edu.unicauca.fachadaServices.services.PreferenciasServiceImpl.getReferencias(PreferenciasServiceImpl.java:28)
+	at co.edu.unicauca.capaDeControladores.ControladorPreferenciasUsuariosIml.getReferencias(ControladorPreferenciasUsuariosIml.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+[CancionesRemoteClient#obtenerCanciones] <--- END ERROR
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- HTTP/1.1 200 OK (1ms)
+[CancionesRemoteClient#obtenerCanciones] content-length: 1059
+[CancionesRemoteClient#obtenerCanciones] content-type: application/json
+[CancionesRemoteClient#obtenerCanciones] date: Mon, 03 Nov 2025 19:31:03 GMT
+[CancionesRemoteClient#obtenerCanciones] 
+[CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
+
+[CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)
+[CancionesRemoteClient#obtenerCanciones] ---> GET http://localhost:8080/canciones HTTP/1.1
+[CancionesRemoteClient#obtenerCanciones] Accept: aplication/json
+[CancionesRemoteClient#obtenerCanciones] ---> END HTTP (0-byte body)
+[CancionesRemoteClient#obtenerCanciones] <--- HTTP/1.1 200 OK (2ms)
+[CancionesRemoteClient#obtenerCanciones] content-length: 1059
+[CancionesRemoteClient#obtenerCanciones] content-type: application/json
+[CancionesRemoteClient#obtenerCanciones] date: Mon, 03 Nov 2025 20:32:17 GMT
+[CancionesRemoteClient#obtenerCanciones] 
+[CancionesRemoteClient#obtenerCanciones] [{"id":1,"titulo":"Lamento Boliviano","artista":"Enanitos Verdes","genero":"Rock","idioma":"Español","duracion":"4:20"},{"id":2,"titulo":"De Música Ligera","artista":"Soda Stereo","genero":"Rock","idioma":"Español","duracion":"3:30"},{"id":3,"titulo":"La Flaca","artista":"Jarabe de Palo","genero":"Rock","idioma":"Español","duracion":"4:00"},{"id":4,"titulo":"Hey Ya!","artista":"OutKast","genero":"Pop","idioma":"Inglés","duracion":"3:55"},{"id":5,"titulo":"Umbrella","artista":"Rihanna","genero":"Pop","idioma":"Inglés","duracion":"4:36"},{"id":6,"titulo":"Sunflower","artista":"Post Malone \u0026 Swae Lee","genero":"Pop","idioma":"Inglés","duracion":"2:38"},{"id":7,"titulo":"Moonlight Sonata","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"14:59"},{"id":8,"titulo":"Fur Elise","artista":"Ludwig van Beethoven","genero":"Clásica","idioma":"Instrumental","duracion":"5:06"},{"id":9,"titulo":"Hungarian Rhapsody No2","artista":"Franz Liszt","genero":"Clásica","idioma":"Instrumental","duracion":"10:31"}]
+
+[CancionesRemoteClient#obtenerCanciones] <--- END HTTP (1059-byte body)

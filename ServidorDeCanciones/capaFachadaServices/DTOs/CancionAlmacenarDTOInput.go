@@ -8,5 +8,6 @@ type CancionAlmacenarDTOInput struct {
 	Anio          int    `json:"anio"`
 	Duracion      string `json:"duracion"`
 	Genero        string `json:"genero"`
+	Idioma        string `json:"idioma"`
 	FechaRegistro string `json:"fecha_registro"`
 }
