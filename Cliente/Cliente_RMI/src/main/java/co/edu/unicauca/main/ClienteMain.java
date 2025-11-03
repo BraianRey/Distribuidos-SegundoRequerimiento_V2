@@ -1,4 +1,4 @@
-package main.java.co.edu.unicauca.main;
+package co.edu.unicauca.main;
 
 import co.edu.unicauca.vista.Menu;
 

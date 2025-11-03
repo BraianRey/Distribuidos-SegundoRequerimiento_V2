@@ -13,9 +13,17 @@ public class Main {
         System.out.println("===============================================");
         System.out.println("   CLIENTE RMI - SISTEMA DE STREAMING");
         System.out.println("===============================================\n");
-        
-        // Iniciar el menú del cliente
-        Menu menu = new Menu();
+        // Buscar parametro --user-id si existe
+        String userId = null;
+        for (int i = 0; i < args.length; i++) {
+            if ("--user-id".equals(args[i]) && i + 1 < args.length) {
+                userId = args[i + 1];
+                break;
+            }
+        }
+
+        // Iniciar el menú del cliente pasando el userId (puede ser null)
+        Menu menu = new Menu(userId);
         menu.ejecutarMenuPrincipal();
     }
 }
