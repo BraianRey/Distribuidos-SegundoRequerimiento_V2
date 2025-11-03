@@ -12,7 +12,7 @@ type ModuloGRPC struct{}
 func (m *ModuloGRPC) Nombre() string { return "Cliente gRPC" }
 
 // Iniciar inicia el módulo gRPC
-func (m *ModuloGRPC) Iniciar(ctx context.Context) error {
+func (m *ModuloGRPC) Iniciar(ctx context.Context, userID string) error {
 	clientgrpc.RunClienteGRPC()
 	return nil
 }

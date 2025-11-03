@@ -8,7 +8,7 @@ import (
 )
 
 // Despliega el menú principal y maneja la selección de módulos
-func MostrarMenuPrincipal(ctx context.Context, modulos []interfaces.IModulo) {
+func MostrarMenuPrincipal(ctx context.Context, modulos []interfaces.IModulo, userID string) {
 	for {
 		fmt.Println("\n=== MENÚ PRINCIPAL ===")
 		for i, m := range modulos {
@@ -29,6 +29,6 @@ func MostrarMenuPrincipal(ctx context.Context, modulos []interfaces.IModulo) {
 			continue
 		}
 
-		modulos[opcion-1].Iniciar(ctx)
+		modulos[opcion-1].Iniciar(ctx, userID)
 	}
 }

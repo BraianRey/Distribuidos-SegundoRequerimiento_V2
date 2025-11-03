@@ -2,7 +2,6 @@ package puentes
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"os"
 	"os/exec"
@@ -18,22 +17,8 @@ func (m *ModuloRMI) Nombre() string {
 }
 
 // Iniciar inicia el módulo RMI
-func (m *ModuloRMI) Iniciar(ctx context.Context) error {
-	// Leer ID del usuario del archivo de configuración
-	config := make(map[string]interface{})
-	configPath := "config.json"
-	data, err := os.ReadFile(configPath)
-	if err != nil {
-		fmt.Println("Error al leer configuración:", err)
-		return err
-	}
-	if err := json.Unmarshal(data, &config); err != nil {
-		fmt.Println("Error al parsear configuración:", err)
-		return err
-	}
-
-	userID, ok := config["user_id"].(string)
-	if !ok || userID == "" {
+func (m *ModuloRMI) Iniciar(ctx context.Context, userID string) error {
+	if userID == "" {
 		fmt.Println("Debe iniciar sesión primero")
 		return fmt.Errorf("usuario no autenticado")
 	}

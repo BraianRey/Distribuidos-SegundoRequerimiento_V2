@@ -23,8 +23,9 @@ func main() {
 	service := servicios.NuevoServicioLogin(repo)
 	controller := controladores.NuevoLoginController(service)
 
-	// Mostrar login
-	if !vistas.MostrarLogin(controller) {
+	// Mostrar login y obtener userID
+	userID, success := vistas.MostrarLogin(controller)
+	if !success {
 		return
 	}
 
@@ -34,5 +35,5 @@ func main() {
 		&puentes.ModuloRMI{},
 	}
 
-	vistas.MostrarMenuPrincipal(ctx, modulos)
+	vistas.MostrarMenuPrincipal(ctx, modulos, userID)
 }
