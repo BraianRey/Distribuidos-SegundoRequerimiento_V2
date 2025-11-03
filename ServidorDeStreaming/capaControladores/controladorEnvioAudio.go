@@ -48,12 +48,12 @@ func (s *ControladorServidor) EnviarCancionMedianteStream(req *pb.PeticionDTO, s
 // registrarReproduccion envía la información de la reproducción al ServidorDeReproducciones
 func registrarReproduccion(req *pb.PeticionDTO) error {
 	log.Printf("📝 Registrando reproducción: Usuario=%d, Canción=%d (%s)",
-		req.IdUsuario, req.IdCancion, req.Titulo)
+		req.IdUsuario, req.Id, req.Titulo)
 
 	// Crear estructura de reproducción
 	reproduccion := Reproduccion{
 		IDUsuario: int(req.IdUsuario),
-		IDCancion: int(req.IdCancion),
+		IDCancion: int(req.Id),
 		Titulo:    req.Titulo,
 		Artista:   req.Artista,
 		Genero:    req.Genero,
