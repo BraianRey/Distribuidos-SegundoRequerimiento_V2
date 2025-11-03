@@ -34,6 +34,39 @@ func keysFromFileHeaderMap(m map[string][]*multipart.FileHeader) []string {
 // StartHTTP arranca el servidor HTTP para administrar canciones y géneros.
 func StartHTTP(f *fachada.FachadaCanciones, listenAddr string) {
 	http.HandleFunc("/canciones", func(w http.ResponseWriter, r *http.Request) {
+		// ✅ GET - Listar todas las canciones
+		if r.Method == http.MethodGet {
+			canciones := f.ObtenerTodasLasCanciones()
+
+			// Convertir al formato esperado por Java
+			type CancionDTO struct {
+				Id       int    `json:"id"`
+				Titulo   string `json:"titulo"`
+				Artista  string `json:"artista"`
+				Genero   string `json:"genero"`
+				Idioma   string `json:"idioma"`
+				Duracion string `json:"duracion"`
+			}
+
+			var cancionesDTO []CancionDTO
+			for _, c := range canciones {
+				cancionesDTO = append(cancionesDTO, CancionDTO{
+					Id:       c.ID,
+					Titulo:   c.Titulo,
+					Artista:  c.Artista,
+					Genero:   c.Genero.Nombre,
+					Idioma:   c.Idioma,
+					Duracion: c.Duracion,
+				})
+			}
+
+			log.Printf("GET /canciones - devolviendo %d canciones", len(cancionesDTO))
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode(cancionesDTO)
+			return
+		}
+
+		// POST - Crear nueva canción (tu código existente)
 		if r.Method == http.MethodPost {
 			defer r.Body.Close()
 
@@ -73,6 +106,10 @@ func StartHTTP(f *fachada.FachadaCanciones, listenAddr string) {
 					}
 				} else if vals := form.Value["GeneroNombre"]; len(vals) > 0 {
 					song.Genero.Nombre = vals[0]
+				}
+				// ✅ Agregar lectura de Idioma
+				if vals := form.Value["Idioma"]; len(vals) > 0 {
+					song.Idioma = vals[0]
 				}
 
 				files := form.File["file"]
@@ -146,7 +183,8 @@ func StartHTTP(f *fachada.FachadaCanciones, listenAddr string) {
 			_ = json.NewEncoder(w).Encode(nc)
 			return
 		}
-		http.Error(w, "ruta no encontrada", http.StatusNotFound)
+
+		http.Error(w, "método no permitido", http.StatusMethodNotAllowed)
 	})
 
 	http.HandleFunc("/generos", func(w http.ResponseWriter, r *http.Request) {

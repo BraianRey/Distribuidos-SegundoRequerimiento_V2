@@ -1,25 +1,21 @@
 package co.edu.unicauca.main;
 
-import co.edu.unicauca.capaDeControladores.ControladorPreferenciasUsuariosInt;
-import co.edu.unicauca.configuracion.lector.LectorPropiedadesConfig;
-import co.edu.unicauca.configuracion.servicios.ClienteDeObjetos;
-import co.edu.unicauca.fachadaServices.services.FachadaGestorUsuariosIml;
 import co.edu.unicauca.vista.Menu;
 
+/**
+ * Clase principal del Cliente RMI
+ * Este cliente se conecta al ServidorDeCalculoPreferencias mediante RMI
+ * para consultar las preferencias musicales de los usuarios
+ */
 public class Main {
+    
     public static void main(String[] args) {
-
-        int puertoNS = Integer.parseInt(LectorPropiedadesConfig.get("ns.port"));
-        String direccionIPNS = LectorPropiedadesConfig.get("ns.host");
-
-        String identificadorObjetoRemoto = "objControladorPreferenciasUsuarios";
-
-        ControladorPreferenciasUsuariosInt objRemoto = ClienteDeObjetos.obtenerObjetoRemoto(direccionIPNS, puertoNS, identificadorObjetoRemoto);
-        FachadaGestorUsuariosIml objFachada = new FachadaGestorUsuariosIml(objRemoto);
-        Menu objMenu = new Menu(objFachada);
-        objMenu.ejecutarMenuPrincipal();
+        System.out.println("===============================================");
+        System.out.println("   CLIENTE RMI - SISTEMA DE STREAMING");
+        System.out.println("===============================================\n");
+        
+        // Iniciar el menú del cliente
+        Menu menu = new Menu();
+        menu.ejecutarMenuPrincipal();
     }
 }
-
-
-

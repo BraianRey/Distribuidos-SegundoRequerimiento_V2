@@ -12,7 +12,7 @@ func StreamAudioFile(tituloCancion string, funcionParaEnviarFragmento func([]byt
 	tituloCancion = tituloCancion + ".mp3"
 	log.Printf("Canción solicitada: %s", tituloCancion)
 	// abrir el archivo de audio
-	file, err := os.Open("../ServidorDeCanciones/canciones/" + tituloCancion)
+	file, err := os.Open("C:\\Users\\adcam\\OneDrive\\Escritorio\\ACBO\\Septimo\\Lab distribuidos\\Distribuidos-SegundoRequerimiento_V2\\ServidorDeCanciones\\canciones\\" + tituloCancion)
 	if err != nil {
 		return fmt.Errorf("no se pudo abrir el archivo: %w", err)
 	}

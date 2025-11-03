@@ -72,15 +72,15 @@ func NuevaFachadaCanciones() *FachadaCanciones {
 	// fallback: datos embebidos
 	generos := []modelos.Genero{{ID: 1, Nombre: "Rock"}, {ID: 2, Nombre: "Pop"}, {ID: 3, Nombre: "Clásica"}}
 	canciones := []modelos.Cancion{
-		{ID: 1, Titulo: "Lamento Boliviano", Artista: "Enanitos Verdes", Album: "Contrarreloj", Anio: 1994, Duracion: "4:20", Genero: generos[0]},
-		{ID: 2, Titulo: "De Música Ligera", Artista: "Soda Stereo", Album: "Canción Animal", Anio: 1990, Duracion: "3:30", Genero: generos[0]},
-		{ID: 3, Titulo: "La Flaca", Artista: "Jarabe de Palo", Album: "La Flaca", Anio: 1996, Duracion: "4:00", Genero: generos[0]},
-		{ID: 4, Titulo: "Hey Ya!", Artista: "OutKast", Album: "Speakerboxxx/The Love Below", Anio: 2003, Duracion: "3:55", Genero: generos[1]},
-		{ID: 5, Titulo: "Umbrella", Artista: "Rihanna", Album: "Good Girl Gone Bad", Anio: 2007, Duracion: "4:36", Genero: generos[1]},
-		{ID: 6, Titulo: "Sunflower", Artista: "Post Malone & Swae Lee", Album: "Spiderman Into the Spider-Verse", Anio: 2018, Duracion: "2:38", Genero: generos[1]},
-		{ID: 7, Titulo: "Moonlight Sonata", Artista: "Ludwig van Beethoven", Album: "Piano Sonata No. 14", Anio: 1791, Duracion: "14:59", Genero: generos[2]},
-		{ID: 8, Titulo: "Fur Elise", Artista: "Ludwig van Beethoven", Album: "Bagatelle No. 25", Anio: 1792, Duracion: "5:06", Genero: generos[2]},
-		{ID: 9, Titulo: "Hungarian Rhapsody No2", Artista: "Franz Liszt", Album: "Hungarian Rhapsodies", Anio: 1847, Duracion: "10:31", Genero: generos[2]},
+		{ID: 1, Titulo: "Lamento Boliviano", Artista: "Enanitos Verdes", Album: "Contrarreloj", Anio: 1994, Duracion: "4:20", Genero: generos[0], Idioma: "Español"},
+		{ID: 2, Titulo: "De Música Ligera", Artista: "Soda Stereo", Album: "Canción Animal", Anio: 1990, Duracion: "3:30", Genero: generos[0], Idioma: "Español"},
+		{ID: 3, Titulo: "La Flaca", Artista: "Jarabe de Palo", Album: "La Flaca", Anio: 1996, Duracion: "4:00", Genero: generos[0], Idioma: "Español"},
+		{ID: 4, Titulo: "Hey Ya!", Artista: "OutKast", Album: "Speakerboxxx/The Love Below", Anio: 2003, Duracion: "3:55", Genero: generos[1], Idioma: "Inglés"},
+		{ID: 5, Titulo: "Umbrella", Artista: "Rihanna", Album: "Good Girl Gone Bad", Anio: 2007, Duracion: "4:36", Genero: generos[1], Idioma: "Inglés"},
+		{ID: 6, Titulo: "Sunflower", Artista: "Post Malone & Swae Lee", Album: "Spiderman Into the Spider-Verse", Anio: 2018, Duracion: "2:38", Genero: generos[1], Idioma: "Inglés"},
+		{ID: 7, Titulo: "Moonlight Sonata", Artista: "Ludwig van Beethoven", Album: "Piano Sonata No. 14", Anio: 1791, Duracion: "14:59", Genero: generos[2], Idioma: "Instrumental"},
+		{ID: 8, Titulo: "Fur Elise", Artista: "Ludwig van Beethoven", Album: "Bagatelle No. 25", Anio: 1792, Duracion: "5:06", Genero: generos[2], Idioma: "Instrumental"},
+		{ID: 9, Titulo: "Hungarian Rhapsody No2", Artista: "Franz Liszt", Album: "Hungarian Rhapsodies", Anio: 1847, Duracion: "10:31", Genero: generos[2], Idioma: "Instrumental"},
 	}
 	f.Generos = generos
 	f.Canciones = canciones
@@ -92,6 +92,14 @@ func NuevaFachadaCanciones() *FachadaCanciones {
 	// persistir generos por separado
 	_ = capaFachadaServices.EscribirGeneros(f.Generos)
 	return f
+}
+
+// ✅ NUEVO: Obtener todas las canciones
+func (f *FachadaCanciones) ObtenerTodasLasCanciones() []modelos.Cancion {
+	f.mu.Lock()
+	defer f.mu.Unlock()
+	log.Printf("Solicitadas todas las canciones, se tienen %d canciones", len(f.Canciones))
+	return f.Canciones
 }
 
 // ListarGeneros devuelve la lista de géneros disponibles

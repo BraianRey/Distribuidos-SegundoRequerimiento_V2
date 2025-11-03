@@ -6,9 +6,9 @@ import java.util.List;
 import co.edu.unicauca.fachadaServices.DTO.CancionDTOEntrada;
 import co.edu.unicauca.fachadaServices.DTO.PreferenciasDTORespuesta;
 import co.edu.unicauca.fachadaServices.DTO.ReproduccionesDTOEntrada;
-import co.edu.unicauca.fachadaServices.services.componenteCalculaPreferencias.CalculadorPreferencias;
-import co.edu.unicauca.fachadaServices.services.componenteComunicacionServidorCanciones.ComunicacionServidorCanciones;
-import co.edu.unicauca.fachadaServices.services.componenteComunicacionServidorReproducciones.ComunicacionServidorReproducciones;
+import co.edu.unicauca.fachadaServices.services.calculadorPreferencias.CalculadorPreferencias;
+import co.edu.unicauca.fachadaServices.services.comunicacionCanciones.ComunicacionServidorCanciones;
+import co.edu.unicauca.fachadaServices.services.compComunicacionServidorReproducciones.ComunicacionServidorReproducciones;
 
 public class PreferenciasServiceImpl implements IPreferenciasService {
 	
