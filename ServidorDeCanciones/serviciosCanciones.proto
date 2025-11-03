@@ -18,6 +18,7 @@ message Cancion {
   int32 anio = 5;
   string duracion = 6;
   Genero genero = 7;
+  string idioma = 8;
 }
 
 message ListaGeneros {

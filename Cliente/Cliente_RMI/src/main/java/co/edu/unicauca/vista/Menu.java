@@ -17,9 +17,11 @@ public class Menu {
 
     private FachadaGestorUsuariosIml fachada;
     private LectorPropiedadesConfig config;
+    private String userId;
 
-    public Menu() {
+    public Menu(String userId) {
         this.config = new LectorPropiedadesConfig();
+        this.userId = userId;
     }
 
     /**
@@ -105,8 +107,13 @@ public class Menu {
             System.out.println("   CONSULTAR PREFERENCIAS MUSICALES");
             System.out.println("========================================");
 
-            System.out.print("Ingrese el ID del usuario: ");
-            int idUsuario = UtilidadesConsola.leerEntero();
+            int idUsuario;
+            if (userId != null) {
+                idUsuario = Integer.parseInt(userId);
+            } else {
+                System.out.print("Ingrese el ID del usuario: ");
+                idUsuario = UtilidadesConsola.leerEntero();
+            }
 
             System.out.println("\n⏳ Consultando preferencias...");
             System.out.println("   (El servidor está consultando canciones y reproducciones)");

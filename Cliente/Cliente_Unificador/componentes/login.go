@@ -20,7 +20,7 @@ type User struct {
 func Login(username, password string) error {
 	client := http.Client{Timeout: 3 * time.Second}
 
-	resp, err := client.Get("http://localhost:3000/users")
+	resp, err := client.Get("http://localhost:3333/users")
 	if err != nil {
 		return fmt.Errorf("error al conectar con servidor simulado: %v", err)
 	}

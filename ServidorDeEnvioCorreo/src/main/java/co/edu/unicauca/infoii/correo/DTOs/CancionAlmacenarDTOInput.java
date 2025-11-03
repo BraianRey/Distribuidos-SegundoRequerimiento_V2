@@ -17,4 +17,5 @@ public class CancionAlmacenarDTOInput {
     private int anio;
     private String duracion;
     private String fecha_registro;
+    private String idioma;
 }

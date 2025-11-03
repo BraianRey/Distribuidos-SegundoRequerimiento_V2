@@ -1,0 +1,5 @@
+{
+    "user_id": "",
+    "servidor_canciones": "localhost:50051",
+    "servidor_streaming": "localhost:50052"
+}

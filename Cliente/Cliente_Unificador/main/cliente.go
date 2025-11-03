@@ -31,6 +31,7 @@ func main() {
 	// Configurar módulos
 	modulos := []interfaces.IModulo{
 		&puentes.ModuloGRPC{},
+		&puentes.ModuloRMI{},
 	}
 
 	vistas.MostrarMenuPrincipal(ctx, modulos)

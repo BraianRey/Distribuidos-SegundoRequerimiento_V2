@@ -9,7 +9,8 @@
     "Genero": {
       "ID": 1,
       "Nombre": "Rock"
-    }
+    },
+    "Idioma": "Español"
   },
   {
     "ID": 2,
@@ -21,7 +22,8 @@
     "Genero": {
       "ID": 1,
       "Nombre": "Rock"
-    }
+    },
+    "Idioma": "Español"
   },
   {
     "ID": 3,
@@ -33,7 +35,8 @@
     "Genero": {
       "ID": 1,
       "Nombre": "Rock"
-    }
+    },
+    "Idioma": "Español"
   },
   {
     "ID": 4,
@@ -45,7 +48,8 @@
     "Genero": {
       "ID": 2,
       "Nombre": "Pop"
-    }
+    },
+    "Idioma": "Inglés"
   },
   {
     "ID": 5,
@@ -57,7 +61,8 @@
     "Genero": {
       "ID": 2,
       "Nombre": "Pop"
-    }
+    },
+    "Idioma": "Inglés"
   },
   {
     "ID": 6,
@@ -69,7 +74,8 @@
     "Genero": {
       "ID": 2,
       "Nombre": "Pop"
-    }
+    },
+    "Idioma": "Inglés"
   },
   {
     "ID": 7,
@@ -81,7 +87,8 @@
     "Genero": {
       "ID": 3,
       "Nombre": "Clásica"
-    }
+    },
+    "Idioma": "Instrumental"
   },
   {
     "ID": 8,
@@ -93,7 +100,8 @@
     "Genero": {
       "ID": 3,
       "Nombre": "Clásica"
-    }
+    },
+    "Idioma": "Instrumental"
   },
   {
     "ID": 9,
@@ -105,6 +113,7 @@
     "Genero": {
       "ID": 3,
       "Nombre": "Clásica"
-    }
+    },
+    "Idioma": "Instrumental"
   }
 ]

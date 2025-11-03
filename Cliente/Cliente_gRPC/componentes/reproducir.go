@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"io"
+	"strconv"
 	"strings"
 
 	util "cliente.local/grpc-cliente/utilidades"
@@ -14,21 +15,30 @@ import (
 
 // Maneja el flujo de reproducción: solicita el stream, lanza goroutines y controla la parada.
 func ReproducirCancion(clientStream pbStream.AudioServiceClient, detalle *pbCancion.Cancion, ctx context.Context, reader *bufio.Reader) error {
-	// Obtener idioma de la canción (si está disponible, sino usar "Desconocido")
-	idioma := "Desconocido"
-	//if detalle.Idioma != "" {
-	//idioma = detalle.Idioma
-	//}
+	// Obtener ID de usuario del archivo de configuración
+	config, err := util.GetConfig()
+	if err != nil {
+		return fmt.Errorf("error al leer configuración: %v", err)
+	}
+	userID, err := strconv.Atoi(config.UserID)
+	if err != nil {
+		return fmt.Errorf("error al convertir ID de usuario: %v", err)
+	}
+	if userID == 0 {
+		return fmt.Errorf("debe iniciar sesión primero")
+	}
 
 	// Crear petición con TODOS los campos necesarios
 	stream, err := clientStream.EnviarCancionMedianteStream(ctx, &pbStream.PeticionDTO{
+		Id:        detalle.Id,
 		Titulo:    detalle.Titulo,
-		Formato:   "mp3",
-		IdUsuario: 1, // TODO: Cambiar por ID del usuario logueado
-		IdCancion: detalle.Id,
 		Artista:   detalle.Artista,
+		Album:     detalle.Album,
+		Anio:      detalle.Anio,
+		Duracion:  detalle.Duracion,
 		Genero:    detalle.Genero.Nombre,
-		Idioma:    idioma,
+		Idioma:    detalle.Idioma,
+		IdUsuario: int32(userID),
 	})
 	if err != nil {
 		return err

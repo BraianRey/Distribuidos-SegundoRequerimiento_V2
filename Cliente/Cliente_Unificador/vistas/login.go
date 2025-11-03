@@ -2,6 +2,7 @@ package vistas
 
 import (
 	"bufio"
+	"encoding/json"
 	"fmt"
 	"os"
 	"strings"
@@ -21,13 +22,24 @@ func MostrarLogin(controller *controladores.LoginController) bool {
 	pass, _ := reader.ReadString('\n')
 	pass = strings.TrimSpace(pass)
 
-	ok, err := controller.ValidarUsuario(user, pass)
+	usuario, err := controller.ValidarUsuario(user, pass)
 	if err != nil {
 		fmt.Println("Error al verificar usuario:", err)
 		return false
 	}
 
-	if ok {
+	if usuario != nil {
+		// Guardar ID del usuario en config.json
+		config := make(map[string]interface{})
+		configPath := "config.json"
+		data, err := os.ReadFile(configPath)
+		if err == nil {
+			json.Unmarshal(data, &config)
+		}
+		config["user_id"] = usuario.ID
+		newData, _ := json.MarshalIndent(config, "", "    ")
+		os.WriteFile(configPath, newData, 0644)
+
 		fmt.Println("Inicio de sesión exitoso (servidor JSON simulado)")
 		return true
 	}

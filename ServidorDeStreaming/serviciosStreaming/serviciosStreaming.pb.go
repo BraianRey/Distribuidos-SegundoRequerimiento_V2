@@ -23,13 +23,15 @@ const (
 
 type PeticionDTO struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Titulo        string                 `protobuf:"bytes,1,opt,name=titulo,proto3" json:"titulo,omitempty"`
-	Formato       string                 `protobuf:"bytes,2,opt,name=formato,proto3" json:"formato,omitempty"`
-	IdUsuario     int32                  `protobuf:"varint,3,opt,name=idUsuario,proto3" json:"idUsuario,omitempty"` // ← NUEVO
-	IdCancion     int32                  `protobuf:"varint,4,opt,name=idCancion,proto3" json:"idCancion,omitempty"` // ← NUEVO
-	Artista       string                 `protobuf:"bytes,5,opt,name=artista,proto3" json:"artista,omitempty"`      // ← NUEVO
-	Genero        string                 `protobuf:"bytes,6,opt,name=genero,proto3" json:"genero,omitempty"`        // ← NUEVO
-	Idioma        string                 `protobuf:"bytes,7,opt,name=idioma,proto3" json:"idioma,omitempty"`        // ← NUEVO
+	Id            int32                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Titulo        string                 `protobuf:"bytes,2,opt,name=titulo,proto3" json:"titulo,omitempty"`
+	Artista       string                 `protobuf:"bytes,3,opt,name=artista,proto3" json:"artista,omitempty"`
+	Album         string                 `protobuf:"bytes,4,opt,name=album,proto3" json:"album,omitempty"`
+	Anio          int32                  `protobuf:"varint,5,opt,name=anio,proto3" json:"anio,omitempty"`
+	Duracion      string                 `protobuf:"bytes,6,opt,name=duracion,proto3" json:"duracion,omitempty"`
+	Genero        string                 `protobuf:"bytes,7,opt,name=genero,proto3" json:"genero,omitempty"`
+	Idioma        string                 `protobuf:"bytes,8,opt,name=idioma,proto3" json:"idioma,omitempty"`
+	IdUsuario     int32                  `protobuf:"varint,9,opt,name=idUsuario,proto3" json:"idUsuario,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -64,6 +66,13 @@ func (*PeticionDTO) Descriptor() ([]byte, []int) {
 	return file_serviciosStreaming_proto_rawDescGZIP(), []int{0}
 }
 
+func (x *PeticionDTO) GetId() int32 {
+	if x != nil {
+		return x.Id
+	}
+	return 0
+}
+
 func (x *PeticionDTO) GetTitulo() string {
 	if x != nil {
 		return x.Titulo
@@ -71,30 +80,30 @@ func (x *PeticionDTO) GetTitulo() string {
 	return ""
 }
 
-func (x *PeticionDTO) GetFormato() string {
+func (x *PeticionDTO) GetArtista() string {
 	if x != nil {
-		return x.Formato
+		return x.Artista
 	}
 	return ""
 }
 
-func (x *PeticionDTO) GetIdUsuario() int32 {
+func (x *PeticionDTO) GetAlbum() string {
 	if x != nil {
-		return x.IdUsuario
+		return x.Album
+	}
+	return ""
+}
+
+func (x *PeticionDTO) GetAnio() int32 {
+	if x != nil {
+		return x.Anio
 	}
 	return 0
 }
 
-func (x *PeticionDTO) GetIdCancion() int32 {
+func (x *PeticionDTO) GetDuracion() string {
 	if x != nil {
-		return x.IdCancion
-	}
-	return 0
-}
-
-func (x *PeticionDTO) GetArtista() string {
-	if x != nil {
-		return x.Artista
+		return x.Duracion
 	}
 	return ""
 }
@@ -111,6 +120,13 @@ func (x *PeticionDTO) GetIdioma() string {
 		return x.Idioma
 	}
 	return ""
+}
+
+func (x *PeticionDTO) GetIdUsuario() int32 {
+	if x != nil {
+		return x.IdUsuario
+	}
+	return 0
 }
 
 type FragmentoCancion struct {
@@ -161,15 +177,17 @@ var File_serviciosStreaming_proto protoreflect.FileDescriptor
 
 const file_serviciosStreaming_proto_rawDesc = "" +
 	"\n" +
-	"\x18serviciosStreaming.proto\x12\tservicios\"\xc5\x01\n" +
-	"\vpeticionDTO\x12\x16\n" +
-	"\x06titulo\x18\x01 \x01(\tR\x06titulo\x12\x18\n" +
-	"\aformato\x18\x02 \x01(\tR\aformato\x12\x1c\n" +
-	"\tidUsuario\x18\x03 \x01(\x05R\tidUsuario\x12\x1c\n" +
-	"\tidCancion\x18\x04 \x01(\x05R\tidCancion\x12\x18\n" +
-	"\aartista\x18\x05 \x01(\tR\aartista\x12\x16\n" +
-	"\x06genero\x18\x06 \x01(\tR\x06genero\x12\x16\n" +
-	"\x06idioma\x18\a \x01(\tR\x06idioma\"&\n" +
+	"\x18serviciosStreaming.proto\x12\tservicios\"\xe3\x01\n" +
+	"\vpeticionDTO\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\x05R\x02id\x12\x16\n" +
+	"\x06titulo\x18\x02 \x01(\tR\x06titulo\x12\x18\n" +
+	"\aartista\x18\x03 \x01(\tR\aartista\x12\x14\n" +
+	"\x05album\x18\x04 \x01(\tR\x05album\x12\x12\n" +
+	"\x04anio\x18\x05 \x01(\x05R\x04anio\x12\x1a\n" +
+	"\bduracion\x18\x06 \x01(\tR\bduracion\x12\x16\n" +
+	"\x06genero\x18\a \x01(\tR\x06genero\x12\x16\n" +
+	"\x06idioma\x18\b \x01(\tR\x06idioma\x12\x1c\n" +
+	"\tidUsuario\x18\t \x01(\x05R\tidUsuario\"&\n" +
 	"\x10fragmentoCancion\x12\x12\n" +
 	"\x04data\x18\x01 \x01(\fR\x04data2d\n" +
 	"\fAudioService\x12T\n" +

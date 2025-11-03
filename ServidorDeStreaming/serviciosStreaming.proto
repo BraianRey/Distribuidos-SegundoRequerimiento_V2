@@ -9,13 +9,15 @@ service AudioService {
 }
 
 message peticionDTO {
-  string titulo = 1;
-  string formato = 2;
-  int32 idUsuario = 3;    // ← NUEVO
-  int32 idCancion = 4;    // ← NUEVO
-  string artista = 5;     // ← NUEVO
-  string genero = 6;      // ← NUEVO
-  string idioma = 7;      // ← NUEVO
+  int32 id = 1;
+  string titulo = 2;
+  string artista = 3;
+  string album = 4;
+  int32 anio = 5;
+  string duracion = 6;
+  string genero = 7;
+  string idioma = 8;
+  int32 idUsuario = 9;
 }
 
 message fragmentoCancion {
