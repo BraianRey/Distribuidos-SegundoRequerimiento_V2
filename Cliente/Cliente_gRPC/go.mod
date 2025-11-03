@@ -3,7 +3,6 @@ module cliente.local/grpc-cliente
 go 1.24.5
 
 require (
-	cliente.local/compartido v0.0.0
 	github.com/faiface/beep v1.1.0
 	google.golang.org/grpc v1.75.1
 	servidor.local/grpc-servidorcanciones v0.0.0

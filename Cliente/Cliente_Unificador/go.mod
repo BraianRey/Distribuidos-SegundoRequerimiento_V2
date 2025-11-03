@@ -2,10 +2,7 @@ module cliente.local/unificador
 
 go 1.24.5
 
-require (
-    cliente.local/compartido v0.0.0
-    cliente.local/grpc-cliente v0.0.0
-)
+require cliente.local/grpc-cliente v0.0.0
 
 require (
 	github.com/faiface/beep v1.1.0 // indirect
