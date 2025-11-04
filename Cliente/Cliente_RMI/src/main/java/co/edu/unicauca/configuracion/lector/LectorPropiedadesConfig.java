@@ -47,7 +47,7 @@ public class LectorPropiedadesConfig {
         try {
             return Integer.parseInt(puerto);
         } catch (NumberFormatException e) {
-            System.out.println("⚠️  Puerto inválido en configuración, usando 1099 por defecto");
+            System.out.println("⚠️  Puerto inválido en configuración, usando 2020 por defecto");
             return 1010;
         }
     }

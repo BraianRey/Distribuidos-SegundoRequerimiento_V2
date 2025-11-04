@@ -256,7 +256,7 @@ func (f *FachadaCanciones) RegistrarCancion(c modelos.Cancion) (modelos.Cancion,
 	// Enviar notificación a RabbitMQ (siempre que la conexión exista)
 	if f.conexionCola != nil {
 		// Fecha de registro (ahora)
-		fecha := time.Now().UTC().Format(time.RFC3339)
+		fecha := time.Now().Format(time.RFC3339)
 
 		// Usar DTO para la representación del mensaje (sin ID, con nombre de genero)
 		dto := dtos.CancionAlmacenarDTOInput{

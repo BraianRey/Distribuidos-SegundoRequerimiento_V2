@@ -23,7 +23,7 @@ public class MessageConsumer {
         System.out.println("Año:      " + objClienteCreado.getAnio());
         System.out.println("Duración: " + objClienteCreado.getDuracion());
         System.out.println("Fecha de Almacenamiento: " + objClienteCreado.getFecha_registro());
-        System.out.println("Frase motivadora: " + "Frase Motivadora");
+        System.out.println("Frase motivadora: " + "Disfruta de las pequeñas cosas");
         System.out.println("----------------------------------------------------");
     }
 }
