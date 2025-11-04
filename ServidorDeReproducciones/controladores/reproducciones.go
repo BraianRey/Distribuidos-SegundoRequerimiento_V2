@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"ServidorDeReproducciones/dto"
-	"ServidorDeReproducciones/repositorio"
+	"ServidorDeReproducciones/fachada"
 	"ServidorDeReproducciones/utils"
 )
 
@@ -49,7 +49,7 @@ func almacenarReproduccion(w http.ResponseWriter, r *http.Request) {
 
 	nueva.FechaHora = time.Now()
 
-	agregada, err := repositorio.Add(nueva)
+	agregada, err := fachada.RegistrarReproduccion(nueva)
 	if err != nil {
 		http.Error(w, "Error al guardar", http.StatusInternalServerError)
 		return
@@ -67,7 +67,7 @@ func consultarReproducciones(w http.ResponseWriter, r *http.Request) {
 	idUsuarioStr := r.URL.Query().Get("idUsuario")
 
 	if idUsuarioStr == "" {
-		all := repositorio.GetAll()
+		all := fachada.ObtenerTodas()
 		fmt.Printf("📊 Consultando todas las reproducciones (%d)\n", len(all))
 		json.NewEncoder(w).Encode(all)
 		return
@@ -79,7 +79,7 @@ func consultarReproducciones(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	res := repositorio.GetByUser(idUsuario)
+	res := fachada.ObtenerPorUsuario(idUsuario)
 	fmt.Printf("📊 Consultando reproducciones del usuario %d: %d encontradas\n", idUsuario, len(res))
 	json.NewEncoder(w).Encode(res)
 }
