@@ -1,10 +1,10 @@
 package repositorio
 
 import (
-	"ServidorDeReproducciones/dto"
 	"encoding/json"
 	"fmt"
 	"os"
+	"servidorDeReproducciones/dto"
 	"sync"
 )
 
@@ -23,7 +23,7 @@ func Load() error {
 	if err != nil {
 		// archivo no existe -> inicializar vacío
 		reproducciones = []dto.Reproduccion{}
-		return Save()
+		return saveInternal() // Usar función interna sin lock
 	}
 
 	err = json.Unmarshal(data, &reproducciones)
@@ -36,11 +36,15 @@ func Load() error {
 	return nil
 }
 
-// Save persiste las reproducciones en disco
+// Save persiste las reproducciones en disco (con lock)
 func Save() error {
 	mu.Lock()
 	defer mu.Unlock()
+	return saveInternal()
+}
 
+// saveInternal persiste sin bloquear (asume que el mutex ya está bloqueado)
+func saveInternal() error {
 	data, err := json.MarshalIndent(reproducciones, "", "  ")
 	if err != nil {
 		return err
@@ -48,7 +52,7 @@ func Save() error {
 	return os.WriteFile(archivoJSON, data, 0644)
 }
 
-// Add agrega una nueva reproduccion y la persiste. Devuelve la reproducción con ID y FechaHora ya asignados.
+// Add agrega una nueva reproduccion y la persiste
 func Add(r dto.Reproduccion) (dto.Reproduccion, error) {
 	mu.Lock()
 	defer mu.Unlock()
@@ -56,7 +60,7 @@ func Add(r dto.Reproduccion) (dto.Reproduccion, error) {
 	r.ID = len(reproducciones) + 1
 	reproducciones = append(reproducciones, r)
 
-	if err := Save(); err != nil {
+	if err := saveInternal(); err != nil { // Usar función interna
 		return dto.Reproduccion{}, err
 	}
 	return r, nil

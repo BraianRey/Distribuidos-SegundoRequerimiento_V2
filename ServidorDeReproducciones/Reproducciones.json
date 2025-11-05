@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "idUsuario": 1,
+    "idCancion": 1,
+    "titulo": "Lamento Boliviano",
+    "artista": "Enanitos Verdes",
+    "genero": "Rock",
+    "idioma": "Español",
+    "fechaHora": "2025-11-01T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "idUsuario": 1,
+    "idCancion": 2,
+    "titulo": "De Música Ligera",
+    "artista": "Soda Stereo",
+    "genero": "Rock",
+    "idioma": "Español",
+    "fechaHora": "2025-11-01T11:15:00Z"
+  },
+  {
+    "id": 3,
+    "idUsuario": 1,
+    "idCancion": 1,
+    "titulo": "Lamento Boliviano",
+    "artista": "Enanitos Verdes",
+    "genero": "Rock",
+    "idioma": "Español",
+    "fechaHora": "2025-11-01T14:20:00Z"
+  },
+  {
+    "id": 4,
+    "idUsuario": 1,
+    "idCancion": 3,
+    "titulo": "La Flaca",
+    "artista": "Jarabe de Palo",
+    "genero": "Rock",
+    "idioma": "Español",
+    "fechaHora": "2025-11-01T16:45:00Z"
+  },
+  {
+    "id": 5,
+    "idUsuario": 2,
+    "idCancion": 4,
+    "titulo": "Hey Ya!",
+    "artista": "OutKast",
+    "genero": "Pop",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-01T09:00:00Z"
+  },
+  {
+    "id": 6,
+    "idUsuario": 2,
+    "idCancion": 5,
+    "titulo": "Umbrella",
+    "artista": "Rihanna",
+    "genero": "Pop",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-01T10:30:00Z"
+  },
+  {
+    "id": 7,
+    "idUsuario": 2,
+    "idCancion": 6,
+    "titulo": "Sunflower",
+    "artista": "Post Malone \u0026 Swae Lee",
+    "genero": "Pop",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-01T12:00:00Z"
+  },
+  {
+    "id": 8,
+    "idUsuario": 2,
+    "idCancion": 4,
+    "titulo": "Hey Ya!",
+    "artista": "OutKast",
+    "genero": "Pop",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-01T15:30:00Z"
+  },
+  {
+    "id": 9,
+    "idUsuario": 2,
+    "idCancion": 5,
+    "titulo": "Umbrella",
+    "artista": "Rihanna",
+    "genero": "Pop",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-01T18:00:00Z"
+  },
+  {
+    "id": 10,
+    "idUsuario": 3,
+    "idCancion": 7,
+    "titulo": "Moonlight Sonata",
+    "artista": "Ludwig van Beethoven",
+    "genero": "Clásica",
+    "idioma": "Instrumental",
+    "fechaHora": "2025-11-01T08:00:00Z"
+  },
+  {
+    "id": 11,
+    "idUsuario": 3,
+    "idCancion": 8,
+    "titulo": "Fur Elise",
+    "artista": "Ludwig van Beethoven",
+    "genero": "Clásica",
+    "idioma": "Instrumental",
+    "fechaHora": "2025-11-01T09:30:00Z"
+  },
+  {
+    "id": 12,
+    "idUsuario": 3,
+    "idCancion": 9,
+    "titulo": "Hungarian Rhapsody No2",
+    "artista": "Franz Liszt",
+    "genero": "Clásica",
+    "idioma": "Instrumental",
+    "fechaHora": "2025-11-01T11:00:00Z"
+  },
+  {
+    "id": 13,
+    "idUsuario": 3,
+    "idCancion": 7,
+    "titulo": "Moonlight Sonata",
+    "artista": "Ludwig van Beethoven",
+    "genero": "Clásica",
+    "idioma": "Instrumental",
+    "fechaHora": "2025-11-01T14:00:00Z"
+  },
+  {
+    "id": 14,
+    "idUsuario": 3,
+    "idCancion": 8,
+    "titulo": "Fur Elise",
+    "artista": "Ludwig van Beethoven",
+    "genero": "Clásica",
+    "idioma": "Instrumental",
+    "fechaHora": "2025-11-01T16:00:00Z"
+  },
+  {
+    "id": 15,
+    "idUsuario": 4,
+    "idCancion": 1,
+    "titulo": "Lamento Boliviano",
+    "artista": "Enanitos Verdes",
+    "genero": "Rock",
+    "idioma": "Español",
+    "fechaHora": "2025-11-02T10:00:00Z"
+  },
+  {
+    "id": 16,
+    "idUsuario": 4,
+    "idCancion": 4,
+    "titulo": "Hey Ya!",
+    "artista": "OutKast",
+    "genero": "Pop",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-02T11:30:00Z"
+  },
+  {
+    "id": 17,
+    "idUsuario": 4,
+    "idCancion": 2,
+    "titulo": "De Música Ligera",
+    "artista": "Soda Stereo",
+    "genero": "Rock",
+    "idioma": "Español",
+    "fechaHora": "2025-11-02T13:00:00Z"
+  },
+  {
+    "id": 18,
+    "idUsuario": 4,
+    "idCancion": 5,
+    "titulo": "Umbrella",
+    "artista": "Rihanna",
+    "genero": "Pop",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-02T15:30:00Z"
+  },
+  {
+    "id": 19,
+    "idUsuario": 5,
+    "idCancion": 3,
+    "titulo": "La Flaca",
+    "artista": "Jarabe de Palo",
+    "genero": "Rock",
+    "idioma": "Español",
+    "fechaHora": "2025-11-02T09:00:00Z"
+  },
+  {
+    "id": 20,
+    "idUsuario": 5,
+    "idCancion": 6,
+    "titulo": "Sunflower",
+    "artista": "Post Malone Swae Lee",
+    "genero": "Pop",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-02T10:30:00Z"
+  },
+  {
+    "id": 21,
+    "idUsuario": 2,
+    "idCancion": 1,
+    "titulo": "Lamento Boliviano",
+    "artista": "Enanitos Verdes",
+    "genero": "Rock",
+    "idioma": "Español",
+    "fechaHora": "2025-11-05T10:09:43.4095994-05:00"
+  },
+  {
+    "id": 22,
+    "idUsuario": 2,
+    "idCancion": 2,
+    "titulo": "De Música Ligera",
+    "artista": "Soda Stereo",
+    "genero": "Rock",
+    "idioma": "Español",
+    "fechaHora": "2025-11-05T10:11:57.4538409-05:00"
+  },
+  {
+    "id": 23,
+    "idUsuario": 1,
+    "idCancion": 4,
+    "titulo": "Hey Ya!",
+    "artista": "OutKast",
+    "genero": "Pop",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-05T10:12:51.3712789-05:00"
+  },
+  {
+    "id": 24,
+    "idUsuario": 2,
+    "idCancion": 10,
+    "titulo": "Don't You Worry Child",
+    "artista": "Swedish House Mafia, John Martin",
+    "genero": "EDM",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-05T10:16:08.3638573-05:00"
+  },
+  {
+    "id": 25,
+    "idUsuario": 2,
+    "idCancion": 11,
+    "titulo": "Don't You Worry Childd",
+    "artista": "Swedish House Mafia, John Martin",
+    "genero": "EDM",
+    "idioma": "Inglés",
+    "fechaHora": "2025-11-05T10:17:45.7908576-05:00"
+  }
+]

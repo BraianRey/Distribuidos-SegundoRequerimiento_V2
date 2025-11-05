@@ -5,9 +5,8 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-
-	"ServidorDeReproducciones/controladores"
-	"ServidorDeReproducciones/repositorio"
+	"servidorDeReproducciones/controladores"
+	"servidorDeReproducciones/repositorio"
 )
 
 func main() {

@@ -1,8 +1,8 @@
 package fachada
 
 import (
-	"ServidorDeReproducciones/dto"
-	"ServidorDeReproducciones/repositorio"
+	"servidorDeReproducciones/dto"
+	"servidorDeReproducciones/repositorio"
 )
 
 // Aplica reglas de negocio (si hubiera) y delega al repositorio
